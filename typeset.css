@@ -1,0 +1,57 @@
+.typeset{
+    display: none;
+  }
+.typeset-cursor{
+  display: inline-block;
+  margin-left:2px;
+  width:3px;
+  height:40px;
+  background:#69D2E7;
+  margin-bottom:-10px;
+}
+@-webkit-keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@-moz-keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@-ms-keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+@keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+.typeset .blink{
+-webkit-animation-name: blink;  
+-webkit-animation-iteration-count: infinite;  
+-webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+-webkit-animation-duration: 1s; 
+
+  -moz-animation-name: blink;  
+  -moz-animation-iteration-count: infinite;  
+  -moz-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -moz-animation-duration: 1s; 
+
+-ms-animation-name: blink;  
+  -ms-animation-iteration-count: infinite;  
+  -ms-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -ms-animation-duration: 1s;
+
+-o-animation-name: blink;  
+-o-animation-iteration-count: infinite;  
+-o-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+-o-animation-duration: 1s;  
+
+animation-name: blink;  
+  animation-iteration-count: infinite;  
+  animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  animation-duration: 1s; 
+}

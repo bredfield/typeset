@@ -5,18 +5,16 @@ module.exports = (grunt) ->
       options:
         banner: "/*! <%= pkg.name %> <%= grunt.template.today(\"yyyy-mm-dd\") %> */\n"
       build:
-        src: "assets/javascripts/application.js"
-        dest: "application.min.js"
+        src: "<%= pkg.name %>.js"
+        dest: "<%= pkg.name %>.min.js"
     coffee:
       scripts:
         files:    
-          "assets/javascripts/<%= pkg.name %>.js": [
-            "assets/javascripts/<%= pkg.name %>.coffee"
-          ]
+          "<%= pkg.name %>.js":"<%= pkg.name %>.coffee"
     watch:
       scripts:
-        files: "assets/javascripts/**/*.coffee"
-        tasks: ["coffee:scripts", "concat"]
+        files: "typeset.coffee"
+        tasks: ["coffee:scripts"]
   
   grunt.loadNpmTasks "grunt-contrib-uglify"
   grunt.loadNpmTasks "grunt-contrib-watch"
